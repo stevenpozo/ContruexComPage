@@ -35,9 +35,9 @@ const FeaturesGrid = () => {
   ];
 
   return (
-    <section className="bg-construex-gray py-12 md:py-16 px-4 pt-16 md:pt-20">
+    <section className="py-12 md:py-16 px-4 pt-16 md:pt-20" style={{ backgroundImage: 'linear-gradient(to bottom, transparent 0%, #f4f4f4 15%, #f4f4f4 85%, transparent 100%)' }}>
       <div className="container mx-auto max-w-6xl">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 items-stretch">
           {features.map((feature, index) => (
             <FeatureCard
               key={feature.title}

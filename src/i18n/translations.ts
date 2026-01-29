@@ -43,6 +43,26 @@ export const translations = {
           title: "AI purchase team",
           subtitle: "Buy with Construex, <strong>leverage data and save money</strong>",
         },
+        global1: {
+          title: "Global Reach",
+          subtitle: "Connect with suppliers worldwide",
+        },
+        global2: {
+          title: "International Standards",
+          subtitle: "Quality assurance across borders",
+        },
+        global3: {
+          title: "Multilingual Support",
+          subtitle: "Support in multiple languages",
+        },
+        global4: {
+          title: "Currency Flexibility",
+          subtitle: "Transactions in local currencies",
+        },
+        global5: {
+          title: "24/7 Global Service",
+          subtitle: "Round-the-clock support",
+        },
       },
       tools: {
         title: "Get All The Tools You Need In a",
@@ -183,6 +203,26 @@ export const translations = {
           title: "Equipo de compras IA",
           subtitle: "Compra con Construex, <strong>aprovecha los datos y ahorra dinero</strong>",
         },
+        global1: {
+          title: "Alcance Global",
+          subtitle: "Conecta con proveedores en todo el mundo",
+        },
+        global2: {
+          title: "Estándares Internacionales",
+          subtitle: "Garantía de calidad transfronteriza",
+        },
+        global3: {
+          title: "Soporte Multilingüe",
+          subtitle: "Soporte en múltiples idiomas",
+        },
+        global4: {
+          title: "Flexibilidad de Moneda",
+          subtitle: "Transacciones en monedas locales",
+        },
+        global5: {
+          title: "Servicio Global 24/7",
+          subtitle: "Soporte las 24 horas",
+        },
       },
       tools: {
         title: "Obtén Todas Las Herramientas Que Necesitas En Una",
@@ -321,6 +361,26 @@ export const translations = {
         ai: {
           title: "Equipe de compras IA",
           subtitle: "Compras inteligentes impulsionadas por inteligência artificial",
+        },
+        global1: {
+          title: "Alcance Global",
+          subtitle: "Conecte com fornecedores em todo o mundo",
+        },
+        global2: {
+          title: "Padrões Internacionais",
+          subtitle: "Garantia de qualidade transfronteiriça",
+        },
+        global3: {
+          title: "Suporte Multilíngue",
+          subtitle: "Suporte em múltiplos idiomas",
+        },
+        global4: {
+          title: "Flexibilidade de Moeda",
+          subtitle: "Transações em moedas locais",
+        },
+        global5: {
+          title: "Serviço Global 24/7",
+          subtitle: "Suporte 24 horas",
         },
       },
       tools: {

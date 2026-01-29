@@ -31,7 +31,7 @@ const StatsSection = () => {
   return (
     <section className="relative">
       {/* Gray Background Section */}
-      <div className="bg-construex-gray rounded-t-[3rem] pt-32 pb-20">
+      <div className="rounded-t-[3rem] pt-32 pb-20" style={{ backgroundImage: 'linear-gradient(to bottom, transparent 0%, #f4f4f4 15%, #f4f4f4 85%, transparent 100%)' }}>
         {/* Stats Cards Container - Overlapping */}
         <div className="relative md:absolute md:left-1/2 md:-translate-x-1/2 -top-12 md:-top-24 z-20">
           <div className="flex flex-col items-center justify-center w-full px-4 md:flex-row md:justify-center md:px-0 gap-6">

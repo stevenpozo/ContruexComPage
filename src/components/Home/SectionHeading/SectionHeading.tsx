@@ -5,7 +5,7 @@ const SectionHeading = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="bg-construex-gray pt-60 pb-40 px-4">
+    <section className="pt-60 pb-40 px-4" style={{ backgroundImage: 'linear-gradient(to bottom, transparent 0%, #f4f4f4 15%, #f4f4f4 85%, transparent 100%)' }}>
       <div className="container mx-auto max-w-5xl">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}

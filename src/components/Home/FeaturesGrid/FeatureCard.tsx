@@ -16,7 +16,7 @@ const FeatureCard = ({ laptopImage, title, subtitle, bgColor, index, bottomImage
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-50px' }}
       transition={{ duration: 0.5, delay: index * 0.15 }}
-      className={`feature-card ${bgColor} relative pt-12 md:pt-16 pb-0 flex flex-col h-fit rounded-[2.5rem]`}    >
+      className={`feature-card ${bgColor} relative pt-12 md:pt-16 pb-0 flex flex-col h-full rounded-[2.5rem]`}    >
       {/* Laptop Image */}
       <div className="absolute -top-14 md:-top-14 right-4 md:right-2 w-[52%] md:w-[55%] z-10">
         <div className="w-full aspect-video rounded-lg overflow-hidden">

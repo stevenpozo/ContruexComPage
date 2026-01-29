@@ -4,6 +4,7 @@ import HeroSection from '@/components/Home/HeroSection/HeroSection';
 import StatsSection from '@/components/Home/StatsSection/StatsSection';
 import SectionHeading from '@/components/Home/SectionHeading/SectionHeading';
 import FeaturesGrid from '@/components/Home/FeaturesGrid/FeaturesGrid';
+import GlobalFeaturesGrid from '@/components/Home/GlobalSeccion/GlobalFeaturesGrid';
 import ToolsHero from '@/components/Home/ToolsHero/ToolsHero';
 import RegionalMarketplaces from '@/components/Home/RegionalMarketplaces/RegionalMarketplaces';
 import LogoMarquee from '@/components/Home/LogoMarquee/LogoMarquee';
@@ -20,6 +21,7 @@ const Home = () => {
       <StatsSection />
       <SectionHeading />
       <FeaturesGrid />
+      <GlobalFeaturesGrid />
       <ToolsHero />
       <RegionalMarketplaces />
       <LogoMarquee />

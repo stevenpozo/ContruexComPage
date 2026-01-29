@@ -58,7 +58,7 @@ const Navbar = () => {
                 {t('nav.aboutUs')}
               </a>
               <a
-                href="#contact"
+                href="/contact"
                 className="text-white text-[18px] font-bold tracking-wide hover:text-orange-500 transition-colors duration-300"
               >
                 {t('nav.contactUs')}
@@ -112,7 +112,7 @@ const Navbar = () => {
                   {t('nav.aboutUs')}
                 </a>
                 <a
-                  href="#contact"
+                  href="/contact"
                   onClick={closeMenu}
                   className="text-white text-2xl font-bold tracking-wide hover:text-orange-500 transition-colors duration-300"
                 >

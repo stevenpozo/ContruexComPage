@@ -1,0 +1,383 @@
+import { sub } from "date-fns";
+
+export const translations = {
+  en: {
+    translation: {
+      nav: {
+        construexGlobal: "Construex Global",
+        aboutUs: "About Us",
+        contactUs: "Contact Us",
+      },
+      hero: {
+        title: "The Largest",
+        b2bPlatform: "B2B Platform",
+        for: "for",
+        subtitle: "Construction Procurement in Emerging Markets",
+        description: "We connect construction suppliers with clients in a simple, fast, and digital way.",
+      },
+      stats: {
+        gmvHighlight: "Value of orders",
+        gmv: "sent via Construex",
+        creditApprovedHighlight: "Number of suppliers",
+        creditApproved: "on the platform",
+        transactionVolumeHighlight: "Number of products",
+        transactionVolume: "on our platform",
+        billion: "Billion",
+        million: "Million",
+      },
+      heading: {
+        line1: "Latin American",
+        largest: "largest B2B",
+        line2: "construction material procurement & credit platform",
+      },
+      features: {
+        marketplace: {
+          title: "Our Marketplace",
+          subtitle: "<strong>Millions</strong> of products in our construction Marketplace",
+        },
+        business: {
+          title: "Run your business with Construex",
+          subtitle: "Manage and <strong>grow your business</strong> with Construex",
+        },
+        ai: {
+          title: "AI purchase team",
+          subtitle: "Buy with Construex, <strong>leverage data and save money</strong>",
+        },
+      },
+      tools: {
+        title: "Get All The Tools You Need In a",
+        highlight: "Single Platform",
+      },
+      map: {
+        building: "Building what's next",
+        subtitle: "Our",
+        marketplaces: "Marketplaces",
+        across: "across the region",
+      },
+      countries: {
+        mexico: "Mexico",
+        brazil: "Brazil",
+        ecuador: "Ecuador",
+        chile: "Chile",
+        guatemala: "Guatemala",
+        bolivia: "Bolivia",
+        panama: "Panama",
+        costarica: "Costa Rica",
+        colombia: "Colombia",
+        peru: "Peru",
+        argentina: "Argentina",
+        uruguay: "Uruguay",
+        paraguay: "Paraguay",
+        elsalvador: "El Salvador",
+      },
+      financing: {
+        title: "Expand and grow your business",
+        subtitle: "with customized financing solutions designed to meet your unique needs.",
+        cta: "Get access to credit",
+      },
+      video: {
+        title: "Transform Your Construction Projects",
+        description: "Discover how Construex is revolutionizing the construction industry with innovative technology solutions that streamline procurement, financing, and project management.",
+      },
+      investors: {
+        title: "Backed by the",
+        subtitle: "World's Best Proptech Investors",
+      },
+      footer: {
+        copyright: "© 2024 Construex. All rights reserved.",
+        cdmx: "Cervantes Saavedra 169, Piso 12, Oficina 112, C.P. 11520, CDMX",
+        merida: "Edificio Nex offices Luxus, Calle 20 #235 Piso 6 Int. 601-A Fracc. Altabrisa Mérida Yucatán C.P. 97130",
+        quito: "Eduardo Salazar Gómez N36-121 y Diego Noboa",
+        contact: "Contact",
+        contactAdvisor: "Contact an Advisor",
+        terms: "Terms and conditions",
+        language: "Language",
+        email: "info@construex.com.mx",
+        knowUs: {
+          title: "Know Us",
+          about: "About",
+          global: "Global",
+          awards: "Awards",
+          news: "Construex in the news",
+          blog: "Blog",
+          careers: "Careers",
+        },
+        buy: {
+          title: "Buy on Construex",
+        },
+        sell: {
+          title: "Sell on Construex",
+        },
+        stayConnected: "Stay connected",
+        offices: {
+          cdmx: {
+            title: "CDMX",
+          },
+          merida: {
+            title: "Mérida",
+          },
+          quito: {
+            title: "Quito",
+          },
+        },
+        languageOptions: {
+          english: "English",
+          spanish: "Español",
+          portuguese: "Português",
+        },
+      },
+    },
+  },
+  es: {
+    translation: {
+      nav: {
+        construexGlobal: "Construex Global",
+        aboutUs: "Nosotros",
+        contactUs: "Contáctanos",
+      },
+      hero: {
+        title: "La Plataforma de",
+        b2bPlatform: "Construcción",
+        for: "",
+        subtitle: "más grande de Mercados Emergentes",
+        description: "Conectamos a proveedores de construcción con clientes de una manera simple, rápida y digital.",
+      },
+      stats: {
+        gmvHighlight: "Valor de pedidos",
+        gmv: "enviados a través de Construex",
+        creditApprovedHighlight: "Número de proveedores",
+        creditApproved: "en la plataforma",
+        transactionVolumeHighlight: "Número de productos",
+        transactionVolume: "en nuestra plataforma",
+        billion: "Billones",
+        million: "Millones",
+      },
+      heading: {
+        line1: "La",
+        largest: "plataforma B2B más grande",
+        line2: "de adquisición de materiales de construcción y crédito de Latinoamérica",
+      },
+      features: {
+        marketplace: {
+          title: "Nuestro Marketplace",
+          subtitle: "<strong>Millones</strong> de productos en nuestro Marketplace de construcción",
+        },
+        business: {
+          title: "Gestiona tu negocio con Construex",
+          subtitle: "Gestiona y <strong>haz crecer tu negocio</strong> con Construex",
+        },
+        ai: {
+          title: "Equipo de compras IA",
+          subtitle: "Compra con Construex, <strong>aprovecha los datos y ahorra dinero</strong>",
+        },
+      },
+      tools: {
+        title: "Obtén Todas Las Herramientas Que Necesitas En Una",
+        highlight: "Sola Plataforma",
+      },
+      map: {
+        building: "Construyendo el futuro",
+        subtitle: "Nuestros",
+        marketplaces: "Marketplaces",
+        across: "en la región",
+      },
+      countries: {
+        mexico: "México",
+        brazil: "Brasil",
+        ecuador: "Ecuador",
+        chile: "Chile",
+        guatemala: "Guatemala",
+        bolivia: "Bolivia",
+        panama: "Panamá",
+        costarica: "Costa Rica",
+        colombia: "Colombia",
+        peru: "Perú",
+        argentina: "Argentina",
+        uruguay: "Uruguay",
+        paraguay: "Paraguay",
+        elsalvador: "El Salvador",
+      },
+      financing: {
+        title: "Expande y haz crecer tu negocio",
+        subtitle: "con soluciones de financiamiento personalizadas diseñadas para satisfacer tus necesidades únicas.",
+        cta: "Accede al crédito",
+      },
+      video: {
+        title: "Transforma Tus Proyectos de Construcción",
+        description: "Descubre cómo Construex está revolucionando la industria de la construcción con soluciones tecnológicas innovadoras que optimizan la adquisición, el financiamiento y la gestión de proyectos.",
+      },
+      investors: {
+        title: "Respaldados por los Mejores Inversores de Proptech del Mundo",
+      },
+      footer: {
+        copyright: "© 2024 Construex. Todos los derechos reservados.",
+        cdmx: "Cervantes Saavedra 169, Piso 12, Oficina 112, C.P. 11520, CDMX",
+        merida: "Edificio Nex offices Luxus, Calle 20 #235 Piso 6 Int. 601-A Fracc. Altabrisa Mérida Yucatán C.P. 97130",
+        quito: "Eduardo Salazar Gómez N36-121 y Diego Noboa",
+        contact: "Contacto",
+        contactAdvisor: "Contacta un Asesor",
+        terms: "Términos y condiciones",
+        language: "Idioma",
+        email: "info@construex.com.mx",
+        knowUs: {
+          title: "Conócenos",
+          about: "Acerca de",
+          global: "Global",
+          awards: "Premios",
+          news: "Construex in the news",
+          blog: "Blog",
+          careers: "Carreras profesionales",
+        },
+        buy: {
+          title: "Compra en Construex",
+        },
+        sell: {
+          title: "Vende en Construex",
+        },
+        stayConnected: "Mantente conectado",
+        offices: {
+          cdmx: {
+            title: "CDMX",
+          },
+          merida: {
+            title: "Mérida",
+          },
+          quito: {
+            title: "Quito",
+          },
+        },
+        languageOptions: {
+          english: "English",
+          spanish: "Español",
+          portuguese: "Português",
+        },
+      },
+    },
+  },
+  pt: {
+    translation: {
+      nav: {
+        construexGlobal: "Construex Global",
+        aboutUs: "Sobre Nós",
+        contactUs: "Contate-nos",
+      },
+      hero: {
+        title: "A Maior Plataforma de",
+        b2bPlatform: "Construção",
+        for: "",
+        subtitle: "da Mercados Emergentes",
+        description: "Conectamos fornecedores de construção com clientes de forma simples, rápida e digital.",
+      },
+      stats: {
+        gmvHighlight: "Valor de pedidos",
+        gmv: "enviados via Construex",
+        creditApprovedHighlight: "Número de fornecedores",
+        creditApproved: "na plataforma",
+        transactionVolumeHighlight: "Número de produtos",
+        transactionVolume: "em nossa plataforma",
+        billion: "Bilhões",
+        million: "Milhões",
+      },
+      heading: {
+        line1: "A",
+        largest: "maior plataforma B2B",
+        line2: "de aquisição de materiais de construção e crédito da América Latina",
+      },
+      features: {
+        marketplace: {
+          title: "Nosso Marketplace",
+          subtitle: "Conecte-se com milhares de fornecedores verificados em toda a América Latina",
+        },
+        business: {
+          title: "Gerencie seu negócio com Construex",
+          subtitle: "Ferramentas completas de gestão empresarial para empresas de construção",
+        },
+        ai: {
+          title: "Equipe de compras IA",
+          subtitle: "Compras inteligentes impulsionadas por inteligência artificial",
+        },
+      },
+      tools: {
+        title: "Obtenha Todas As Ferramentas Que Você Precisa Em Uma",
+        highlight: "Única Plataforma",
+      },
+      map: {
+        building: "Construindo o futuro",
+        subtitle: "Nossos",
+        marketplaces: "Marketplaces",
+        across: "na região",
+      },
+      countries: {
+        mexico: "México",
+        brazil: "Brasil",
+        ecuador: "Equador",
+        chile: "Chile",
+        guatemala: "Guatemala",
+        bolivia: "Bolívia",
+        panama: "Panamá",
+        costarica: "Costa Rica",
+        colombia: "Colômbia",
+        peru: "Peru",
+        argentina: "Argentina",
+        uruguay: "Uruguai",
+        paraguay: "Paraguai",
+        elsalvador: "El Salvador",
+      },
+      financing: {
+        title: "Expanda e faça seu negócio crescer",
+        subtitle: "com soluções de financiamento personalizadas projetadas para atender às suas necessidades únicas.",
+        cta: "Acesse o crédito",
+      },
+      video: {
+        title: "Transforme Seus Projetos de Construção",
+        description: "Descubra como a Construex está revolucionando a indústria da construção com soluções tecnológicas inovadoras que otimizam aquisições, financiamento e gestão de projetos.",
+      },
+      investors: {
+        title: "Apoiados pelos Melhores Investidores de Proptech do Mundo",
+      },
+      footer: {
+        copyright: "© 2024 Construex. Todos os direitos reservados.",
+        cdmx: "Cervantes Saavedra 169, Piso 12, Oficina 112, C.P. 11520, CDMX",
+        merida: "Edificio Nex offices Luxus, Calle 20 #235 Piso 6 Int. 601-A Fracc. Altabrisa Mérida Yucatán C.P. 97130",
+        quito: "Eduardo Salazar Gómez N36-121 y Diego Noboa",
+        contact: "Contato",
+        contactAdvisor: "Fale com um Consultor",
+        terms: "Termos e condições",
+        language: "Idioma",
+        email: "info@construex.com.mx",
+        knowUs: {
+          title: "Conheça-nos",
+          about: "Sobre",
+          global: "Global",
+          awards: "Prêmios",
+          news: "Construex in the news",
+          blog: "Blog",
+          careers: "Carreiras",
+        },
+        buy: {
+          title: "Compre na Construex",
+        },
+        sell: {
+          title: "Venda na Construex",
+        },
+        stayConnected: "Mantenha-se conectado",
+        offices: {
+          cdmx: {
+            title: "CDMX",
+          },
+          merida: {
+            title: "Mérida",
+          },
+          quito: {
+            title: "Quito",
+          },
+        },
+        languageOptions: {
+          english: "English",
+          spanish: "Español",
+          portuguese: "Português",
+        },
+      },
+    },
+  },
+};

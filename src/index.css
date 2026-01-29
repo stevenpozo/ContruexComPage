@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+@import 'leaflet/dist/leaflet.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Construex Design System - B2B Construction Platform */
+
+@layer base {
+  :root {
+    /* Core Brand Colors */
+    --construex-orange: 25 89% 47%;
+    --construex-orange-light: 25 78% 63%;
+    --construex-dark: 210 15% 12%;
+    --construex-dark-card: 210 13% 22%;
+    --construex-slate: 210 10% 15%;
+    --construex-gray: 0 0% 95%;
+    
+    /* Semantic Colors */
+    --background: 0 0% 100%;
+    --foreground: 210 15% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 15% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 15% 12%;
+
+    --primary: 25 89% 47%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 13% 22%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 0 0% 95%;
+    --muted-foreground: 210 10% 40%;
+
+    --accent: 25 89% 47%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 15% 85%;
+    --input: 210 15% 85%;
+    --ring: 25 89% 47%;
+
+    --radius: 0.75rem;
+
+    /* Feature Card Colors */
+    --card-orange: 25 78% 63%;
+    --card-blue: 197 70% 83%;
+    --card-silver: 214 20% 85%;
+
+    /* Gradients */
+    --gradient-stat-bar: linear-gradient(90deg, hsl(197 70% 60%) 0%, hsl(220 80% 50%) 100%);
+    
+    /* Sidebar */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 25 89% 47%;
+  }
+
+  .dark {
+    --background: 210 15% 12%;
+    --foreground: 0 0% 95%;
+    --card: 210 13% 22%;
+    --card-foreground: 0 0% 95%;
+    --popover: 210 13% 22%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 25 89% 47%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 10% 30%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 210 10% 25%;
+    --muted-foreground: 210 10% 60%;
+    --accent: 25 89% 47%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 210 10% 25%;
+    --input: 210 10% 25%;
+    --ring: 25 89% 47%;
+    --sidebar-background: 210 15% 10%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 25 89% 47%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 10% 20%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 210 10% 20%;
+    --sidebar-ring: 25 89% 47%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  /* Capsule Text Highlight */
+  .capsule {
+    @apply inline-block border-2 border-primary px-4 py-1 rounded-full;
+  }
+
+  .capsule-white {
+    @apply inline-block border-2 border-white px-4 py-1 rounded-full;
+  }
+
+  /* Stat Card Styling */
+  .stat-card {
+    @apply bg-secondary rounded-3xl p-6 shadow-xl;
+  }
+
+  /* Feature Card */
+  .feature-card {
+    @apply rounded-[2rem] overflow-visible cursor-pointer transition-transform duration-300 hover:scale-[1.03];
+  }
+
+  .feature-card strong {
+    @apply font-bold text-black;
+  }
+
+  /* Country hover */
+  .country-item {
+    @apply transition-colors duration-200 cursor-pointer hover:text-primary;
+  }
+
+  .country-item.active {
+    @apply text-primary;
+  }
+
+  /* Navbar link */
+  .nav-link {
+    @apply relative transition-all duration-200 hover:scale-105;
+  }
+
+  .nav-link::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-full h-0.5 bg-primary scale-x-0 transition-transform duration-300 origin-center;
+  }
+
+  .nav-link:hover::after,
+  .nav-link.active::after {
+    @apply scale-x-100;
+  }
+
+  /* Video overlay */
+  .video-overlay {
+    @apply absolute inset-0 bg-black/50;
+  }
+
+  /* Gradient masks for marquee */
+  .marquee-mask {
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  }
+}
+
+@layer utilities {
+  /* Animation utilities */
+  .animate-marquee {
+    animation: marquee 60s linear infinite;
+  }
+
+  .animate-marquee:hover {
+    animation-play-state: paused;
+  }
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  /* Stat bar gradient */
+  .stat-bar-gradient {
+    stroke: url(#statGradient);
+  }
+
+  /* Leaflet custom styles */
+  .leaflet-container {
+    background: var(--construex-dark);
+    font-family: 'Inter', sans-serif;
+  }
+
+  .leaflet-control-attribution {
+    display: none !important;
+  }
+
+  .leaflet-control-zoom {
+    display: none !important;
+  }
+
+  .leaflet-tooltip {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+    border: 1px solid rgba(239, 125, 0, 0.3) !important;
+    border-radius: 9999px !important;
+    padding: 0.5rem 1rem !important;
+    font-weight: 700 !important;
+    font-size: 0.75rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3) !important;
+  }
+
+  .leaflet-tooltip::before {
+    display: none !important;
+  }
+
+  .leaflet-interactive {
+    transition: all 0.3s ease !important;
+  }}

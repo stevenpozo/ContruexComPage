@@ -1,14 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { Facebook, Instagram, Linkedin, Youtube, Twitter } from 'lucide-react';
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from '@/components/ui/select';
-import i18n from '@/i18n';
 import logo from '@/assets/logo.png';
 import { externalLinks } from '@/lib/externalLinks';
 
@@ -21,10 +13,6 @@ const TikTokIcon = () => (
 
 const Footer = () => {
   const { t } = useTranslation();
-
-  const handleLanguageChange = (value: string) => {
-    i18n.changeLanguage(value);
-  };
 
   const socialLinks = [
     { icon: Facebook, href: '#', label: 'Facebook' },
@@ -134,7 +122,7 @@ const Footer = () => {
             </nav>
           </motion.div>
 
-          {/* Columna 5: Contacto (Copyright y Idioma) */}
+          {/* Columna 5: Contacto (Copyright y Redes Sociales) */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -145,60 +133,31 @@ const Footer = () => {
             <h3 className="text-white font-semibold mb-4">
               {t('footer.contact')}
             </h3>
-            <p className="text-white/60 text-sm mb-8">
+            <p className="text-white/60 text-sm mb-6">
               {t('footer.copyright')}
             </p>
-            {/* Language Selector */}
-            <div>
-              <label className="text-white/60 text-sm mb-2 block">
-                {t('footer.language')}
-              </label>
-              <Select defaultValue="en" onValueChange={handleLanguageChange}>
-                <SelectTrigger className="w-40 bg-construex-dark-card border-white/20 text-white">
-                  <SelectValue />
-                </SelectTrigger>
-                <SelectContent className="bg-construex-dark-card border-white/20">
-                  <SelectItem value="en" className="text-white hover:bg-white/10">
-                    {t('footer.languageOptions.english')}
-                  </SelectItem>
-                  <SelectItem value="es" className="text-white hover:bg-white/10">
-                    {t('footer.languageOptions.spanish')}
-                  </SelectItem>
-                  <SelectItem value="pt" className="text-white hover:bg-white/10">
-                    {t('footer.languageOptions.portuguese')}
-                  </SelectItem>
-                </SelectContent>
-              </Select>
+            {/* Redes Sociales */}
+            <div className="mb-4">
+              <h4 className="text-white font-semibold mb-3 text-left">
+                {t('footer.stayConnected')}
+              </h4>
+              <div className="grid grid-cols-3 gap-2">
+                {socialLinks.map(({ icon: Icon, href, label }) => (
+                  <a
+                    key={label}
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={label}
+                    className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#ef8d4f] transition-colors"
+                  >
+                    <Icon className="w-5 h-5 text-white" />
+                  </a>
+                ))}
+              </div>
             </div>
           </motion.div>
         </div>
-
-        {/* Sección Social */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          className="mt-12 pt-8 border-t border-white/10"
-        >
-          <h3 className="text-white font-semibold mb-6 text-center">
-            {t('footer.stayConnected')}
-          </h3>
-          <div className="flex justify-center space-x-4">
-            {socialLinks.map(({ icon: Icon, href, label }) => (
-              <a
-                key={label}
-                href={href}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={label}
-                className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#ef8d4f] transition-colors"
-              >
-                <Icon className="w-5 h-5 text-white" />
-              </a>
-            ))}
-          </div>
-        </motion.div>
       </div>
     </footer>
   );

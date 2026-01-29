@@ -1,7 +1,15 @@
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Globe } from 'lucide-react';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select';
+import i18n from '@/i18n';
 import logo from '@/assets/logo.png';
 
 const Navbar = () => {
@@ -19,6 +27,10 @@ const Navbar = () => {
 
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
+
+  const handleLanguageChange = (value: string) => {
+    i18n.changeLanguage(value);
+  };
 
   return (
     <>
@@ -63,6 +75,26 @@ const Navbar = () => {
               >
                 {t('nav.contactUs')}
               </a>
+              {/* Language Selector */}
+              <div className="flex items-center space-x-2">
+                <Globe className="w-5 h-5 text-white" />
+                <Select defaultValue="en" onValueChange={handleLanguageChange}>
+                  <SelectTrigger className="w-24 bg-transparent border-white/20 text-white">
+                    <SelectValue />
+                  </SelectTrigger>
+                  <SelectContent className="bg-black/20 backdrop-blur-lg border-white/10 shadow-2xl">
+                    <SelectItem value="en" className="text-white hover:bg-white/10">
+                      EN
+                    </SelectItem>
+                    <SelectItem value="es" className="text-white hover:bg-white/10">
+                      ES
+                    </SelectItem>
+                    <SelectItem value="pt" className="text-white hover:bg-white/10">
+                      PT
+                    </SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
             </div>
 
             {/* Mobile Menu Button */}

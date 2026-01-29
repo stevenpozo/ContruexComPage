@@ -116,7 +116,7 @@ export const translations = {
         knowUs: {
           title: "Know Us",
           about: "About",
-          global: "Global",
+          global: "Business Services",
           awards: "Awards",
           news: "Construex in the news",
           blog: "Blog",
@@ -275,7 +275,7 @@ export const translations = {
         knowUs: {
           title: "Conócenos",
           about: "Acerca de",
-          global: "Global",
+          global: "Business Services",
           awards: "Premios",
           news: "Construex in the news",
           blog: "Blog",

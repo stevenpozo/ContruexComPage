@@ -7,7 +7,7 @@ export default defineConfig(({ mode }) => ({
   server: {
     host: "::",
     port: 8080,
-    allowedHosts: ['internet-observed-laptops-lloyd.trycloudflare.com'],
+    allowedHosts: ['guarantee-surf-dude-guest.trycloudflare.com'],
     hmr: {
       overlay: false,
     },
